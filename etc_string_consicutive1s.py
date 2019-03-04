@@ -16,4 +16,5 @@ def countStrings(n):
 
 
 # Driver program
-print(countStrings(1))
+h = int(input())
+print(countStrings(h))

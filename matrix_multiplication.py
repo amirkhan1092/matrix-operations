@@ -22,8 +22,7 @@ if c1 == r2:
             for k in range(c1):
                 result[i][j] += X[i][k] * Y[k][j]
 
-    for r in result:
-        print(r)
+
 else:
     print(' dimension not valid for matrix multiplication ')
 
