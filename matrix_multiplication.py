@@ -2,28 +2,29 @@ def dimension(A):
     return len(A),len(A[0])
 
 
-X = [[2, 3, 4], [3, 5, 6]]
-Y = [[2, 6], [2, 8], [4, 6]]
+A = [[2,4,5],
+     [3,7,9]]
 
-r1, c1 = dimension(X)
-r2, c2 = dimension(Y)
+B = [[2,6],
+     [3,7],
+     [2,4]]
 
-result = [[[0]*2]*2]
+r1,c1=dimension(A)
+r2,c2=dimension(B)
 
-
-
-if c1 == r2:
-
-    # iterate through rows of X
+if c1==r2:
+    result =[[0,0],
+             [0,0]]
     for i in range(r1):
-        # iterate through columns of Y
         for j in range(c2):
-            # iterate through rows of Y
             for k in range(c1):
-                result[i][j] += X[i][k] * Y[k][j]
-
+                result[i][j] += A[i][k] *B[k][j]
 
 else:
-    print(' dimension not valid for matrix multiplication ')
+    print('dimension not match ')
 
-print(result)
+
+for i in result:
+    print(i)
+
+
